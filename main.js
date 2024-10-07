@@ -5,10 +5,10 @@ console.log(c)  // passing c into the log method/function of the console object.
 
 //F5 fn+5 RUN/PLAY
 
-let firstName = "Kevin";
-let greeting = "Hello ";
+let firstName = "Kevin"; // JavaScript's fundamental/primative data types,
+let greeting = "Hello "; //  include numbers and strings of characters/letter.
 
-// Concatenate operator - "Chain together" like a train.
-let message = greeting + firstName; 
+// Concatenate operator - "Chain together" like cars a train.
+let message = greeting + firstName;  // "Hello Kevin"
 
-console.log(message);
+console.log(message); // "Hello Kevin"
