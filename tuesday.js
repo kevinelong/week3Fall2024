@@ -28,18 +28,18 @@ console.log(ms) // ms since 1/1/1970 00:00:00
 // F5 (fn 5 or fn F5) - RUN/DEBUG/EXECUTE
 
 let counter = 0
-counter++ //increment - bump up by one
+counter++ // increment - bump up by one
 counter++
 console.log(counter) //???
-counter-- //decrement - minus one
+counter-- // decrement - minus one
 console.log(counter) //???
 
 let level = 0
-level += 5
+level += 5 // increment by five
 level += 5
 level += 5
 console.log(level) // ???
-level -= 5
+level -= 5 // decrement by five
 console.log(level) // ???
 
 console.log(3 + 5) // + (plus) addition
