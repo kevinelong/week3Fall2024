@@ -19,8 +19,11 @@ const totalDue = foodCost + tax + tip;
 // console.log("Tip is " + tip);
 // console.log("Total Due is " + totalDue);
 
+const first = "Kevin";
+
 // TEMPLATE STRING USING BACKTICKS ` like a madlib.
 console.log(`
+My name is ${first}.
 Food cost is $${foodCost} and tax is $${tax}.
 Tip is $${tip}.
 Total Due is $${totalDue}.
