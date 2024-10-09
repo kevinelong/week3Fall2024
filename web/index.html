@@ -12,11 +12,18 @@
     
     QTY <input type="number" value="1" id="qty"> &lt;--Input<br>
     DESC<input type="text" value="pencil" id="desc" readonly><br>
-    EACH<input type="number" value="1.23" id="each" readonly><br>
-    EXT PRICE <input type="number" value="1.23" id="ext" readonly>&lt;--Output<br>
+    EACH<input type="number" value="1" id="each" readonly><br>
+    EXT PRICE <input type="number" value="1.23" id="ext" class="ext" readonly>&lt;--Output<br>
     <button id="calc">CALC</button>
 </body>
 <script>
-    
+    // const ext = document.getElementById("ext");
+    // const ext = document.querySelector(".ext")
+    calc.addEventListener("click", ()=>{ //ignore this for now
+        const q = Number(qty.value);
+        const p = Number(each.value);
+        const amount = q * p; //pure javascript
+        ext.value = amount.toFixed(2); // convert to string using toFixed()
+    });// and this
 </script>
 </html>
