@@ -4,7 +4,7 @@
 
 // Bool - Boolean (True/False) Data Type - Reasone/Philosophy into math?
 
-//INPUTS
+//INPUTS - all three boolean
 hasCar = true
 hasLicense = true
 canReachPedals = true
@@ -14,11 +14,11 @@ console.log("START")
 
 //DECISION
 if(hasLicense && hasCar && canReachPedals){ //acts as a gate
-    //CONDITIONAL CODE MIGHT NOT BE RUN/EXECUTED
+    //CONDITIONAL CODE MIGHT NOT BE RUN/EXECUTED if expression on 16 is false
     console.log("Zoom");
     console.log("Zoom");
 }else{
-    console.log("Cry and suffer.")
+    console.log("Cry and suffer.") //skipped when all are true
 }
 
 //BACK IN MAIN LIN OF CODE
