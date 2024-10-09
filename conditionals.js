@@ -9,11 +9,13 @@ hasCar = true
 hasLicense = true
 canReachPedals = true
 
+const meetsAllCriteria = hasLicense && hasCar && canReachPedals;
+
 //CALCULATION
 console.log("START")
 
 //DECISION
-if(hasLicense && hasCar && canReachPedals){ //acts as a gate
+if(meetsAllCriteria){ //acts as a gate
     //CONDITIONAL CODE MIGHT NOT BE RUN/EXECUTED if expression on 16 is false
     console.log("Zoom");
     console.log("Zoom");
