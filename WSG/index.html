@@ -1,0 +1,32 @@
+<body>
+    <div id="heroElement" style="left:0; position: absolute;">H</div>    
+    <div id="treasureElement" style="left:100px; position: absolute;">T</div>    
+    <br>
+    <button id="btnRight">&gt;</button>
+</body>
+<script>
+    let heroPosition = 0;
+    let treasurePosition = 100;
+    const leapSteps = 20;
+    function moveHero(){
+        heroPosition += leapSteps;
+        // heroPosition = heroPosition + leapSteps;
+        if(heroPosition == treasurePosition){
+            alert("YAY!!!")
+        }
+        updateDisplay();
+    }
+    function updateDisplay(){
+        heroElement.style.left = `${heroPosition}px`;
+    }
+    updateDisplay(); //first time
+    btnRight.addEventListener("click", moveHero);
+    //objective
+    //mission
+    //hero/monkey
+    //treasure/banana
+    //obstacle/villian
+    //stupid rules
+    // action
+    // results
+</script>
