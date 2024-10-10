@@ -1,0 +1,21 @@
+<head>
+    <script src="./counter.js"></script>  
+</head>
+<body>
+    <div id="outputDisplay">0</div>
+    <button id="btnUp">Up</button>
+    <button id="btnDown">Down</button>
+</body>
+<script>
+    function updateDisplay(){
+        outputDisplay.innerText = getCounter();
+    }
+    btnUp.addEventListener("click",()=>{
+        moveUp();
+        updateDisplay();
+    });
+    btnDown.addEventListener("click",()=>{
+        moveDown();
+        updateDisplay();
+    });
+</script>
