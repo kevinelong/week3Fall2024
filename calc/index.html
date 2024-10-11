@@ -10,7 +10,7 @@
                     First 1:
                 </td>
                 <td>
-                    <input type="number" id="numberA">
+                    <input type="number" id="numberA" value="6">
                 </td>
             </tr>
             <tr>
@@ -18,14 +18,14 @@
                     Second 2:
                 </td>
                 <td>
-                    <input type="number" id="numberB">
+                    <input type="number" id="numberB" value="7">
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <button id="btnAdd">Add</button>
                     <button id="btnSubtract">Subtract</button>
-                    <button id="btnMultiple">Multiply</button>
+                    <button id="btnMultiply">Multiply</button>
                     <button id="btnDivide">Divide</button>
                 </td>
             </tr>
@@ -34,12 +34,23 @@
                     Answer:
                 </td>
                 <td>
-                    <input type="text" readonly>
+                    <input id="answer" type="text" readonly>
                 </td>
             </tr>
         </table>
     </fieldset>
 </body>
 <script>
-
+    //TODO call function when buttons ar clicked and place output in answer
+    function onClick(event){
+        const operator = event.target.innerText.toLowerCase()
+        const a = Number(numberA.value);
+        const b = Number(numberB.value);
+        answer.value = calc(a,b,operator);
+    }
+    // const  btnAdd = document.getElementById("btnAdd");
+    btnAdd.addEventListener("click", onClick);
+    btnSubtract.addEventListener("click", onClick);
+    btnMultiply.addEventListener("click", onClick);
+    btnDivide.addEventListener("click", onClick);
 </script>
