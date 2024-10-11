@@ -1,6 +1,7 @@
 <head>
     <script src="./main.js"></script>
 </head>
+
 <body>
     <fieldset style="width:245px; margin: auto">
         <legend>Calculator Apllication</legend>
@@ -42,11 +43,15 @@
 </body>
 <script>
     //TODO call function when buttons ar clicked and place output in answer
-    function onClick(event){
+    function onClick(event) {
         const operator = event.target.innerText.toLowerCase()
         const a = Number(numberA.value);
         const b = Number(numberB.value);
-        answer.value = calc(a,b,operator);
+        if ("divide" == operator) {
+            answer.value = calc(a, b, operator).toFixed(3);
+        } else {
+            answer.value = calc(a, b, operator)
+        }
     }
     // const  btnAdd = document.getElementById("btnAdd");
     btnAdd.addEventListener("click", onClick);
