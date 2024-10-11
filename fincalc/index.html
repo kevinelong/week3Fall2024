@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fin calc</title>
+    <script src="./mort.js"></script>
 </head>
+
 <body>
     <h1>Fin Calc</h1>
-    
+
+    <label for="amountInK">Total Loan Amount in K(1000s) e.g. 200 for 200K</label><br>
+    <input type="number" id="amountInK" value="200"><br><br>
+
+    <label for="annualInterestRate">Rate in whole percent e.g. 3.5 for 3.5%</label><br>
+    <input type="number" id="annualInterestRate" value="4"><b3595.31r><br><br>
+
+    <label for="numberOfYears">Years e.g. 30 for 30 years.</label><br>
+    <input type="number" id="numberOfYears" value="30"><br><br>
+
+    <button id="calcPayment">Calculate Payment</button><br><br>
+
+    Calculated Payment Amount:<br>
+    $<input type="text" id="paymentAmount" value="???">
+
 </body>
+<script>
+    function onClick() {
+        const principalLoanAmountInK = amountInK.value;
+        const yearlyInterestRate = annualInterestRate.value;
+        const termInYears = numberOfYears.value;
+        const p = calculateMonthlyPayment(principalLoanAmountInK, yearlyInterestRate, termInYears);
+        paymentAmount.value = p.toFixed(2);
+    }
+    calcPayment.addEventListener("click", onClick);
+</script>
+
 </html>
