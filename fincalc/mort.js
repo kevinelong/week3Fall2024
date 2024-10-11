@@ -27,7 +27,7 @@ function calculateMonthlyPayment(principalLoanAmountInK, yearlyInterestRate, ter
     const r = monthlyInterestRate / 100; // (annual rate divided by 12)
     const n = numberOfPayments; //(loan term in months)
 
-    const M = P * ((r * ((1 + r) ** n)) / (((1 + r) ** n) - 1));
+    const M = P * r * ((1 + r) ** n) / (((1 + r) ** n) - 1);
     const monthlyPayment = M;
     return monthlyPayment
 }
